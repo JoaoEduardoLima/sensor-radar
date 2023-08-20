@@ -1,0 +1,29 @@
+# Ignore arquivos gerados pelo Leiningen (build tool para Clojure)
+/target/
+
+# Ignore arquivos de configuração do Leiningen
+/.lein-repl-history
+
+# Ignore arquivos de configuração do Editor (por exemplo, VS Code)
+/.vscode/
+
+# Ignore arquivos de log
+*.log
+
+# Ignore arquivos de dependências
+/lib/
+
+# Ignore arquivos gerados durante a compilação
+/classes/
+
+# Ignore arquivos temporários
+*.swp
+*~
+
+# Ignore arquivos de backup
+*.bak
+
+# Ignore arquivos de caches
+/.cpcache
+/.cljs_node_repl/
+/.sass_cache/
