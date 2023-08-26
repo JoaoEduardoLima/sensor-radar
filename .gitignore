@@ -3,6 +3,7 @@
 
 # Ignore arquivos de configuração do Leiningen
 /.lein-repl-history
+/.lein-failures
 
 # Ignore arquivos de configuração do Editor (por exemplo, VS Code)
 /.vscode/
@@ -27,3 +28,4 @@
 /.cpcache
 /.cljs_node_repl/
 /.sass_cache/
+/.lsp/
