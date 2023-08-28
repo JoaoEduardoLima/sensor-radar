@@ -1,0 +1,7 @@
+FROM docker.io/bitnami/zookeeper:3.8
+
+EXPOSE 2181
+
+VOLUME data:/bitnami
+
+ENV ALLOW_ANONYMOUS_LOGIN=yes
