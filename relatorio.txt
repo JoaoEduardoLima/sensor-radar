@@ -1,2 +1,1 @@
 AAA-0000: {:status "executado", :velocidade 101, :placa "AAA-0000", :multa "150.0", :pontos 5}
-teste

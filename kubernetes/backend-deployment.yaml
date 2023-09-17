@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-deployment
+  labels:
+    app: backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+      - name: backend
+        image: joaoeduardolima/sensor-radar-backend:1.0.0
+        env:
+          - name: VALOR_MULTA_1
+            value: "150.0"
+          - name: VALOR_MULTA_2
+            value: "250.0"
+          - name: VALOR_MULTA_3
+            value: "300.0"
