@@ -2,14 +2,17 @@ FROM docker.io/bitnami/kafka:3.4
 
 EXPOSE 9092
 
+#USER root
+#RUN apt-get update && apt_get install -y nc iputils-ping telnet vim
+
 VOLUME /data:/bitnami
 
 COPY create-topics.sh /opt/bitnami/scripts/
 
 ENV KAFKA_BROKER_ID=1
 ENV KAFKA_CFG_LISTENERS=PLAINTEXT://:9092
-ENV KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://host.docker.internal:9092
-ENV KAFKA_CFG_ZOOKEEPER_CONNECT=host.docker.internal:2181
+ENV KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://kafka:9092
+ENV KAFKA_CFG_ZOOKEEPER_CONNECT=zookeeper:2181
 ENV ALLOW_PLAINTEXT_LISTENER=yes
 
 CMD ["./opt/bitnami/scripts/create-topics.sh"]
